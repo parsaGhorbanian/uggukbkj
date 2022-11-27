@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 600px;
+            height: 400px;
+            margin: 100px auto;
+            background-image: url(img/7e3daf49-9c3f-4f39-a748-d902a736b0de.png);
+            background-size: cover;
+            transition: 2s;
+        }
+
+        .box1 {
+            clip-path: circle(20%);
+        }
+
+        .box1:hover {
+            clip-path: circle(60%);
+        }
+
+        .box2 {
+            clip-path: circle(30% at 0 0);
+        }
+
+        .box2:hover {
+            clip-path: circle(50% at 100% 100%);
+        }
+
+        .box3 {
+            clip-path: ellipse(20% 50%);
+        }
+
+        .box3:hover {
+            clip-path: ellipse(50% 80%);
+        }
+
+        .box4 {
+            clip-path: ellipse(10% 30% at 0 50%);
+            animation: para1 infinite alternate linear 2s;
+        }
+
+        @keyframes para1 {
+            to {
+                clip-path: ellipse(20% 50% at 100% 50%);
+            }
+        }
+        .box5{
+            clip-path: inset(0 0 0 0);
+        }
+        .box5:hover{
+            clip-path: inset(20px 50px 60px 70px);
+        }
+        .box6{
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        .box6:hover{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%, 0% 100%, 0% 25%);
+        }
+        .box7{
+            clip-path: polygon(0 0, 100% 0, 50% 100%, 50% 80%, 80% 25%, 20% 25%, 50% 80%, 50% 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <div class="box box7"></div>
+</body>
+
+</html>

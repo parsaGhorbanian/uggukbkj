@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+        .box>h2{
+            width: fit-content;
+            position: absolute;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 15rem;
+            top: 50%;left: 50%;
+            transform: translate(-50%, -50%);
+            color: purple;
+        }
+        .box>h2:nth-of-type(2){
+            color: goldenrod;
+            animation: para linear infinite alternate 5s;
+        }
+
+        @keyframes para {
+            0%{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            20%{
+                clip-path: polygon(30% 20%, 90% 5%, 95% 70%, 0 50%);
+            }
+            50%{
+                clip-path: polygon(10% 40%, 70% 5%, 75% 70%, 10% 50%);
+            }
+            100%{
+                clip-path: polygon(40% 0%, 50% 5%, 65% 70%, 30% 50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>ARSAM</h2>
+        <h2>ARSAM</h2>
+    </div>
+</body>
+</html>
